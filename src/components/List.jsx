@@ -17,10 +17,14 @@ const List = () => {
   console.log(initialTodos);
 
   const addTodo = (todo) => {
-    setTodos([
-      { id: nanoid(), description: todo, completed: false, isEditing: false },
-      ...todos,
-    ]);
+    if (todo.trim().length === 0) {
+      alert("Enter a task, not just empty spaces..");
+    } else {
+      return setTodos([
+        { id: nanoid(), description: todo, completed: false, isEditing: false },
+        ...todos,
+      ]);
+    }
   };
 
   const handleDelete = (id) => {
@@ -67,26 +71,28 @@ const List = () => {
   };
 
   return (
-    <div>
+    <div className="todoLayoutWrapper">
       <TodoLayout addTodo={addTodo} />
-      {todos.map((todo) =>
-        todo.isEditing ? (
-          <EditTodo
-            key={todo.id}
-            task={todo}
-            saveEdit={saveEdit}
-            cancelEdit={cancelEdit}
-          />
-        ) : (
-          <Todo
-            task={todo}
-            key={todo.id}
-            deleteButton={handleDelete}
-            editingTodo={editingTodo}
-            handleToggle={handleToggle}
-          />
-        )
-      )}
+      <div className="todosWrapper">
+        {todos.map((todo) =>
+          todo.isEditing ? (
+            <EditTodo
+              key={todo.id}
+              task={todo}
+              saveEdit={saveEdit}
+              cancelEdit={cancelEdit}
+            />
+          ) : (
+            <Todo
+              task={todo}
+              key={todo.id}
+              deleteButton={handleDelete}
+              editingTodo={editingTodo}
+              handleToggle={handleToggle}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 };

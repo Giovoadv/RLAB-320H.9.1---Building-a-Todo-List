@@ -1,4 +1,45 @@
-.todoWrapper {
+.todosWrapper {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  width: 500px;
+  background-color:lightgray;
+  border-radius: 25px;
+  
 }
+.wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.todoRow{
+  display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: .5rem;
+}
+
+.todoRow button{
+  margin-right: 0.5rem;
+}
+.todoDescription, .editForm{
+  flex: 1;
+}
+
+.edit-wrapper{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button{
+  width: 75px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  
+}
+

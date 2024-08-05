@@ -27,8 +27,8 @@ const EditTodo = ({ task, saveEdit, cancelEdit }) => {
   };
 
   return (
-    <div className="wrapper">
-      <form>
+    <div className="todoRow">
+      <form className="editForm">
         <input
           type="text"
           value={taskValue}

@@ -20,6 +20,7 @@ const TodoLayout = ({ addTodo }) => {
           value={taskValue}
           placeholder="Write your todo task"
           onChange={(e) => setTaskValue(e.target.value)}
+          required
         />
         <button type="submit">Add</button>
       </form>

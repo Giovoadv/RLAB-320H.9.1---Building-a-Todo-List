@@ -5,24 +5,25 @@ const Todo = ({ task, deleteButton, editingTodo, handleToggle }) => {
     handleToggle(task.id);
   };
   return (
-    <li className="todoWrapper">
+    <div className="todoRow">
       <input
         type="checkbox"
         onChange={checkBoxToggle}
         checked={task.completed}
       />
-      <span style={task.completed ? { textDecoration: "line-through" } : {}}>
+      <span className="todoDescription" style={task.completed ? { textDecoration: "line-through" } : {}}>
         {task.description}
       </span>
-
-      <button onClick={() => editingTodo(task.id)}>Edit</button>
-      <button
-        onClick={() => deleteButton(task.id, task.completed)}
-        disabled={!task.completed}
-      >
-        Delete
-      </button>
-    </li>
+      <div>
+        <button onClick={() => editingTodo(task.id)}>Edit</button>
+        <button
+          onClick={() => deleteButton(task.id, task.completed)}
+          disabled={!task.completed}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
   );
 };
 
