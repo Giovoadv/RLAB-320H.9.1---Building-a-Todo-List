@@ -29,7 +29,7 @@ const EditTodo = ({ task, saveEdit, cancelEdit }) => {
   return (
     <div className="todoRow">
       <form className="editForm">
-        <input
+        <input 
           type="text"
           value={taskValue}
           placeholder="Write your todo task"
@@ -38,8 +38,8 @@ const EditTodo = ({ task, saveEdit, cancelEdit }) => {
           }
         />
       </form>
-      <button onClick={handleSubmit}>Save</button>
-      <button onClick={handleCancel}>Cancel</button>
+      <button className="saveButton" onClick={handleSubmit}>Save</button>
+      <button className="cancelButton" onClick={handleCancel}>Cancel</button>
     </div>
   );
 };

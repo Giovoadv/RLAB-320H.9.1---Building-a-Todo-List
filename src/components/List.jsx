@@ -5,10 +5,10 @@ import Todo from "./Todo";
 import EditTodo from "./EditTodo";
 
 const initialTodos = [
-  { id: nanoid(), description: "Passports", completed: true, isEditing: false },
-  { id: nanoid(), description: "Socks", completed: false, isEditing: false },
-  { id: nanoid(), description: "pizza", completed: false, isEditing: false },
-  { id: nanoid(), description: "cola", completed: true, isEditing: false },
+  { id: nanoid(), description: "Do the groceries", completed: true, isEditing: false },
+  { id: nanoid(), description: "Wash the cars", completed: false, isEditing: false },
+  { id: nanoid(), description: "Clean the house", completed: false, isEditing: false },
+  { id: nanoid(), description: "Make dinner", completed: true, isEditing: false },
 ];
 
 const List = () => {

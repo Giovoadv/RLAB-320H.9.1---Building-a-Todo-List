@@ -11,12 +11,18 @@ const Todo = ({ task, deleteButton, editingTodo, handleToggle }) => {
         onChange={checkBoxToggle}
         checked={task.completed}
       />
-      <span className="todoDescription" style={task.completed ? { textDecoration: "line-through" } : {}}>
-        {task.description}
-      </span>
+      <div
+        className="todoDescription"
+        style={task.completed ? { textDecoration: "line-through" } : {}}
+      >
+        <span className="task">{task.description}</span>
+      </div>
       <div>
-        <button onClick={() => editingTodo(task.id)}>Edit</button>
+        <button className="editButton" onClick={() => editingTodo(task.id)}>
+          Edit
+        </button>
         <button
+          className="deleteButton"
           onClick={() => deleteButton(task.id, task.completed)}
           disabled={!task.completed}
         >

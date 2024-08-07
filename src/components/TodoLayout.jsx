@@ -12,17 +12,19 @@ const TodoLayout = ({ addTodo }) => {
   };
 
   return (
-    <div className="wrapper">
-      <h1>Create Todo List</h1>
+    <div className="Inputwrapper">
+      <div className="todoTitle">
+      <h1 >Create Todo List</h1>
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={taskValue}
-          placeholder="Write your todo task"
+          placeholder="Enter a task"
           onChange={(e) => setTaskValue(e.target.value)}
           required
         />
-        <button type="submit">Add</button>
+        <button  className="addButton"type="submit">Add</button>
       </form>
     </div>
   );

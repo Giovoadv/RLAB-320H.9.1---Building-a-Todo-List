@@ -1,12 +1,36 @@
+body {
+  background-color: ghostwhite;
+}
+
 .todosWrapper {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  background-color:lightgray;
+  width: 600px;
+  background-color: lightgray;
   border-radius: 25px;
-  
+  overflow: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.wrapper{
+
+.todoTitle {
+  background-color: tomato;
+  width: 250px;
+  height: 60px;
+  margin-bottom: 2rem;
+  border-radius: 33px;
+}
+.todoTitle h1 {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+input {
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,31 +39,81 @@
   gap: 0.5rem;
 }
 
-.todoRow{
+.Inputwrapper {
   display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    padding: .5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
-.todoRow button{
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.todoRow {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 0.5rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.todoRow button {
   margin-right: 0.5rem;
 }
-.todoDescription, .editForm{
+.todoDescription {
+  background-color: rgb(168, 160, 151);
+  border-radius: 25px;
+  height: 33px;
+  width: auto;
+  margin-right: 10px;
+  margin-left: 5px;
+  overflow: auto;
+}
+.todoDescription,
+.editForm {
   flex: 1;
 }
+.editForm input {
+  width: 85%;
+  border-radius: 33px;
+}
 
-.edit-wrapper{
+.edit-wrapper {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
-button{
+button {
   width: 75px;
   height: 35px;
   border: none;
   cursor: pointer;
-  
+  border-radius: 10px;
 }
 
+.addButton {
+  background-color: rgb(122, 185, 206);
+  margin-left: 1rem;
+}
+
+.editButton {
+  background-color: rgb(234, 235, 194);
+}
+
+.deleteButton {
+  background-color: rgb(209, 122, 122);
+}
+.saveButton {
+  background-color: rgb(143, 201, 143);
+}
+.cancelButton {
+  background-color: rgb(223, 129, 95);
+}
